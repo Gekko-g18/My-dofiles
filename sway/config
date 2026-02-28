@@ -209,29 +209,21 @@ bindsym $mod+r mode "resize"
 ### VISUAIS EXCLUSIVOS DO SWAYFX   ###
 ######################################
 
-# Bordas arredondadas (SwayFX 0.5+)
-corner_radius 10
+# Cantos arredondados nas janelas
+corner_radius 12
 
-# Ativar animações globais
-animations enable
-
-# Configurar animações de workspace
-# Nota: O SwayFX usa transições de 'fade' ou 'zoom' para workspaces
-animation workspace_switch_duration 300
-animation workspace_switch_curve easeOutExpo
-
-# Sombras (O nome correto é shadow_blur_radius)
+# Sombras (excelente para destacar o Rofi flutuante sobre os apps)
 shadows enable
-shadow_blur_radius 20
+shadows_on_csd off
+shadow_color #00000077
 
-# Efeitos de Blur (Vidro embaçado)
+# Blur no fundo de janelas transparentes (como terminais)
 blur enable
-blur_xray enable
 blur_passes 3
-blur_radius 7
+blur_radius 5
 
-# Escurece janelas inativas (Foco)
-default_dim_inactive 0.15
+# Escurecer janelas que não estão em foco (Fica sensacional!)
+default_dim_inactive 0.2
 
 # 1. Forçar transparência em tudo para o Blur brilhar
 for_window [app_id=".*"] opacity 0.85
