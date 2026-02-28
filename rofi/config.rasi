@@ -1,0 +1,86 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    display-drun: " ";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+@theme "/dev/null"
+
+* {
+    /* Paleta Mocha */
+    bg-col:  #1e1e2e;      /* Base */
+    bg-col-light: #313244; /* Surface0 */
+    border-col: #b4befe;    /* Lavender */
+    selected-col: #313244; 
+    text-col: #cdd6f4;     /* Text (Claro) */
+    mauve: #cba6f7;        /* Roxo Elfa */
+    
+    background-color: transparent;
+    text-color: @text-col; /* Força texto claro em tudo */
+}
+
+window {
+    height: 380px;
+    width: 600px;
+    border: 2px;
+    border-color: @border-col;
+    border-radius: 12px;
+    background-color: @bg-col;
+}
+
+mainbox {
+    background-color: @bg-col;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-col;
+    padding: 10px;
+}
+
+prompt {
+    background-color: @mauve;
+    padding: 6px 10px;
+    text-color: @bg-col; /* Texto escuro aqui só pro contraste no fundo roxo */
+    border-radius: 6px;
+}
+
+entry {
+    padding: 6px;
+    margin: 0 10px;
+    text-color: @text-col; /* Texto que você digita fica claro */
+    background-color: @bg-col;
+    placeholder: "Buscar...";
+    placeholder-color: #6c7086;
+}
+
+listview {
+    border: 0px;
+    padding: 6px 12px;
+    columns: 1;
+    lines: 8;
+}
+
+element {
+    padding: 8px;
+    border-radius: 8px;
+    text-color: @text-col; /* Garante nomes dos apps claros */
+}
+
+element-icon {
+    size: 24px;
+}
+
+element selected {
+    background-color: @bg-col-light;
+    text-color: @mauve; /* O item selecionado brilha em roxo */
+}
+
+/* Forçar cores nos textos internos */
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+}

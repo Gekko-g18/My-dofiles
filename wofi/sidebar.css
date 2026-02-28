@@ -1,0 +1,46 @@
+window {
+    background-color: rgba(30, 30, 46, 0.90); /* Mocha Base com opacidade levemente maior */
+    color: #cdd6f4;                          /* Texto claro (Text) */
+    font-family: "JetBrainsMono Nerd Font";
+    border-left: 2px solid #fab387;          /* Borda Pêssego para o "calor" do café */
+}
+
+#outer-box {
+    margin: 20px;
+}
+
+#prompt {
+    font-size: 18px;
+    font-weight: bold;
+    color: #11111b;                          /* Texto escuro para o destaque */
+    background: linear-gradient(90deg, #fab387, #cba6f7); /* Degradê Pêssego para Mauve */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#entry {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+#entry:selected {
+    background-color: rgba(203, 166, 247, 0.15); /* Mauve muito suave no fundo */
+    border-left: 4px solid #cba6f7;              /* Indicador lateral Mauve */
+    outline: none;
+}
+
+#text {
+    font-size: 14px;
+}
+
+/* Categorias em Mauve para destaque suave */
+#text:contains("SISTEMA"), 
+#text:contains("APLICATIVOS"), 
+#text:contains("ENERGIA") {
+    color: #cba6f7;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
